@@ -1,0 +1,70 @@
+﻿@using WebApplicationCURDoperations16.Models;
+@model Book
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>REGISTER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.markuptag.com/bootstrap/5/css/bootstrap.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="signup-form mt-5 border p-4 bg-light shadow">
+   
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Book</p>
+
+                                   
+
+                                    @using (Html.BeginForm())
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <h4 class="mb-5 text-secondary">Enter book details</h4>
+                                        <div class="row">
+                                            <div class="mb-3 col-md-8">
+                                                <label>Title<span class="text-danger">*</span></label>
+                                                @Html.TextBoxFor(model => model.Title, new { @class = "form-control", placeholder="Enter Title" })
+                                                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="mb-3 col-md-8">
+                                                <label>Author<span class="text-danger">*</span></label>
+                                                @Html.TextBoxFor(model => model.Author, new { @class = "form-control", placeholder="Enter Author" })
+                                                @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="mb-3 col-md-8">
+                                                <label>Description<span class="text-danger">*</span></label>
+                                                @Html.TextBoxFor(model => model.Description, new { @class = "form-control", placeholder="Enter Description" })
+                                                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label>Publishedyear<span class="text-danger">*</span></label>
+                                                @Html.EditorFor(model => model.Publishedyear, new { htmlAttributes = new { @class = "form-control input-md", @placeholder = "Name"} })
+                                                @Html.ValidationMessageFor(model => model.Publishedyear, "", new { @class = "text-danger" })
+                                            </div>
+                                            
+                                            </div> <div class="col-md-5">
+                                                <input type="submit" class="btn btn-primary float-end" value="Submit">
+                                            </div>
+
+                                    
+                    <div class="col-md-7">
+                        <p class="text-center mt-3 text-secondary">If you have account,  @Html.ActionLink("GET DATA","GETALLDATA","Book")</p>
+                    </div>
+                   
+            }
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebApplicationCURDoperations16.Models.Book>
+@{
+    ViewData["Title"] = "Display";
+
+}
+
+<h1>Display</h1>
+<div class="container">
+    Welcome To Display Data Page
+</div>
+<div>
+    <a asp-action="Insert">Create</a>
+</div>
+<table class="table table-dark table-hover">
+
+
+
+    <tr>
+        <th>BID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Description</th>
+        <th>Publishedyear</th>
+
+        <th>Action</th>
+    </tr>
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BID</td>
+
+            <td>@item.Title</td>
+
+            <td>@item.Author</td>
+
+            <td>@item.Description</td>
+
+            <td>@item.Publishedyear</td>
+
+
+
+            <td>
+                @Html.ActionLink("Update","Update","Book", new {BID= item.BID},null) |
+                @Html.ActionLink("Delete","Delete","Book", new {BID = item.BID},new{onclick="return confirm('Are you sure wants to delete?')"})|
+                @Html.ActionLink("Details","Details","Book", new {BID= item.BID},null) |
+            </td>
+
+        </tr>
+    }
+
+
+
+
+</table>

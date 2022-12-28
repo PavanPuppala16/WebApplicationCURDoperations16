@@ -1,0 +1,39 @@
+﻿@model IEnumerable<WebApplicationCURDoperations16.Models.INVOICE_MODEL>
+@{
+    Layout = null;
+}
+@Html.ActionLink("update","UPDATE","CURD")
+@Html.ActionLink("update","DELETED","CURD")
+
+<h1>GETALLDATA</h1>
+<div class="container">
+    Welcome To Display Data Page
+</div>
+
+<table class="table table-striped">
+
+    <tr>
+        <th>equipment</th>
+        <th>cartype</th>
+        <th>Notified</th>
+        <th>credits</th>
+        <th>dates</th>
+     
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.equipment</td>
+            <td>@item.cartype</td>
+            <td>@item.Notified</td>
+            <td>@item.credits</td>
+            <td>@item.dates</td>
+            <td> </td>
+
+        </tr>
+    }
+
+</table>

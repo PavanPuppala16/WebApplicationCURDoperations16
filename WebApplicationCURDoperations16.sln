@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationCURDoperations16", "WebApplicationCURDoperations16\WebApplicationCURDoperations16.csproj", "{E0DF46C8-1B40-42B7-AC37-A0A72F3A4765}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0DF46C8-1B40-42B7-AC37-A0A72F3A4765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0DF46C8-1B40-42B7-AC37-A0A72F3A4765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0DF46C8-1B40-42B7-AC37-A0A72F3A4765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0DF46C8-1B40-42B7-AC37-A0A72F3A4765}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49B70BC2-156A-4D9F-B822-82A5DEF97828}
+	EndGlobalSection
+EndGlobal

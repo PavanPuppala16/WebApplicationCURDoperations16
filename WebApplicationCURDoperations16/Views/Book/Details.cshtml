@@ -1,0 +1,66 @@
+﻿@model WebApplicationCURDoperations16.Models.Book
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.markuptag.com/bootstrap/5/css/bootstrap.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3  border-4  rounded bg-white shadow p-5">
+                    <div class="signup-form mt-5 border p-4 bg-white  border-4 rounded bg-white shadow p-5">
+                        <hr />
+                        <dl class="row">
+                            @* <dt class = "col-sm-2">
+                            @Html.DisplayNameFor(model => model.Bid)
+                            </dt>*@
+                            @*<dd class = "col-sm-10">
+                            @Html.DisplayFor(model => model.Bid)
+                            </dd>*@
+                            <dt class="col-sm-6">
+                                @Html.DisplayNameFor(model => model.Title)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Title)
+                            </dd>
+                            <dt class="col-sm-6">
+                                @Html.DisplayNameFor(model => model.Author)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Author)
+                            </dd>
+                            <dt class="col-sm-6">
+                                @Html.DisplayNameFor(model => model.Description)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Description)
+                            </dd>
+                            <dt class="col-sm-6">
+                                @Html.DisplayNameFor(model => model.Publishedyear)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.Publishedyear)
+                            </dd>
+                        </dl>
+
+                        @* @Html.ActionLink("Update","Update", new"Books", new {}) |*@
+                        <a asp-action="GETALLDATA">Back to List</a>
+                    </div>
+                    </body>
+                    </html>
